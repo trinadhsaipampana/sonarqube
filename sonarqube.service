@@ -12,7 +12,7 @@ Group=trinadh
 ExecStart=/opt/sonarqube-10.6.0.92116/bin/linux-x86-64/sonar.sh start
 ExecStop=/opt/sonarqube-10.6.0.92116/bin/linux-x86-64/sonar.sh stop
 [Install]
-wantedBy=multi-user.target
+WantedBy=multi-user.target
 
 After creating the file execute the follwoing commands:
 chmod 777 /etc/systemd/system/sonarqube.service
