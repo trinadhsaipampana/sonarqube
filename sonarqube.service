@@ -1,0 +1,23 @@
+Manually stop the running sonarqube by executing following command if it is running:
+sh sonar.sh stop
+
+Now create a file in /etc/systemd/system as sonarqube.service with following content:
+[Unit]
+Description=sonarqube service
+After=network.target
+[Service]
+Type=forking
+User=trinadh
+Group=trinadh
+ExecStart=/opt/sonarqube-10.6.0.92116/bin/linux-x86-64/sonar.sh start
+ExecStop=/opt/sonarqube-10.6.0.92116/bin/linux-x86-64/sonar.sh stop
+[Install]
+wantedBy=multi-user.target
+
+After creating the file execute the follwoing commands:
+chmod 777 /etc/systemd/system/sonarqube.service
+systemctl daemon-reload
+systemclt enable sonarqube.service
+systemctl status sonarqube.service
+systemctl stop sonarqube.service
+systemctl start sonarqube.service
