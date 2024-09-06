@@ -3,4 +3,4 @@ Download sonarqube from offical website https://www.sonarsource.com/products/son
 After downloading, navigate to /opt/sonarqube-10.6.0.92116/bin/linux-x86-64 and execute the following command to start/stop the sonarqube:
 sh sonar.sh start/stop
 
-Once sonarqube is running, access the sonarqube from browser with privateIP:9000
+Once sonarqube is running, access the sonarqube from browser with IP:9000
