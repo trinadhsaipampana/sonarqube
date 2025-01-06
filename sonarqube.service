@@ -15,8 +15,6 @@ ExecStop=/opt/sonarqube-10.6.0.92116/bin/linux-x86-64/sonar.sh stop
 WantedBy=multi-user.target
 
 After creating the file execute the follwoing commands:
-chmod 777 /etc/systemd/system/sonarqube.service
-systemctl daemon-reload
 systemclt enable sonarqube.service
 systemctl status sonarqube.service
 systemctl stop sonarqube.service
